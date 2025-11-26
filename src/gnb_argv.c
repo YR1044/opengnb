@@ -31,7 +31,7 @@
 
 extern gnb_conf_ext_lite_t gnb_conf_ext_lite;
 
-void show_description();
+void show_description(void);
 
 static void show_useage(int argc,char *argv[]);
 

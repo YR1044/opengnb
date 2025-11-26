@@ -288,7 +288,6 @@ static void handle_ur1_frame(gnb_core_t *gnb_core, gnb_payload16_t *payload, gnb
 
     }
 
-
     src_uuid64 = gnb_ntohll(ur1_frame_head->src_uuid64);
     src_node = (gnb_node_t *)GNB_HASH32_UINT64_GET_PTR(gnb_core->uuid_node_map, src_uuid64);
 
@@ -352,11 +351,11 @@ static void handle_ur1_frame(gnb_core_t *gnb_core, gnb_payload16_t *payload, gnb
         //payload 转发到指定 host and port 
         if ( payload->sub_type & GNB_PAYLOAD_SUB_TYPE_UR1_HEADER ) {
             gnb_send_to_address(gnb_core, &ur1_address_st, payload);
-            GNB_LOG3(gnb_core->log,GNB_LOG_ID_MAIN_WORKER, "UR1 frame payload relay to %s whith frame header\n", GNB_IP_PORT_STR1(&ur1_address_st) );
+            GNB_LOG3(gnb_core->log,GNB_LOG_ID_MAIN_WORKER, "UR1 frame payload relay to %s with frame header\n", GNB_IP_PORT_STR1(&ur1_address_st) );
         } else {
             //skip frame header
             gnb_send_udata_to_address(gnb_core,&ur1_address_st, payload->data + sizeof(gnb_ur1_frame_head_t), data_size - sizeof(gnb_ur1_frame_head_t));
-            GNB_LOG3(gnb_core->log,GNB_LOG_ID_MAIN_WORKER, "UR1 frame payload relay to %s whithout frame header\n", GNB_IP_PORT_STR1(&ur1_address_st) );
+            GNB_LOG3(gnb_core->log,GNB_LOG_ID_MAIN_WORKER, "UR1 frame payload relay to %s without frame header\n", GNB_IP_PORT_STR1(&ur1_address_st) );
         }
 
         return;

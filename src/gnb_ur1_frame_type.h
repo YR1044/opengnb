@@ -44,6 +44,6 @@ typedef struct _gnb_ur1_frame_head_t{
 
 #pragma pack(pop)
 
-#define GNB_MAX_UR1_FRAME_SIZE       (32*1024)
+#define GNB_MAX_UR1_FRAME_SIZE       (64*1024 - sizeof(gnb_ur1_frame_head_t) - 4)
 
 #endif

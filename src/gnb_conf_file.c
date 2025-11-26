@@ -1206,7 +1206,7 @@ void local_node_file_config(gnb_conf_t *conf){
     case GNB_MEMORY_SCALE_TINY:
         conf->payload_block_size = 1024*8;
         conf->max_heap_fragment  = 1024*8;
-		conf->index_service_lru_size = 1024*2;
+        conf->index_service_lru_size = 1024*2;
         break;
     case GNB_MEMORY_SCALE_SMALL:
         conf->payload_block_size = 1024*16;
