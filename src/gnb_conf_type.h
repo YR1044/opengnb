@@ -112,8 +112,10 @@ typedef struct _gnb_conf_t {
 	unsigned char if_dump;
 	unsigned char udp_socket_type;
 	uint8_t multi_socket;
+	//用户自定义的 packet filter 模块
 	char pf_route[NAME_MAX];
-	uint8_t pf_route_mode;
+	//用户自定义的 packet filter 模块启动选项
+	uint8_t pf_route_opt;
 
     #define GNB_UNIFIED_FORWARDING_OFF          0
     #define GNB_UNIFIED_FORWARDING_FORCE        1
