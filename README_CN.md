@@ -157,7 +157,7 @@ nodeA --UDP payload--- upd_over_tcp_A --TCP payload--- upd_over_tcp_B --UDP payl
 
 ```
 
-## [便于部署的跨平台的OpenGNB管理平台](/https://github.com/cnkedao/opengnb-admin)
+## [便于部署的跨平台的OpenGNB管理平台](https://github.com/cnkedao/opengnb-admin)
 
 ## GNB 快速上手
 
