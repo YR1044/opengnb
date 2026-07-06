@@ -49,7 +49,6 @@ GNB_OBJS =                                       \
        ./src/gnb_hash32.o                        \
        ./src/gnb_keys.o                          \
        ./src/gnb_nodeid.o                        \
-       ./src/gnb_event.o                         \
        ./libs/hash/murmurhash.o
 
 
